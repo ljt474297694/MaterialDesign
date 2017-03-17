@@ -27,7 +27,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * toolBar + CoordinatorLayout
+ * Created by 李金桐 on 2017/3/16.
+ * QQ: 474297694
+ * 功能: ToolBar + CoordinatorLayout  Toolbar滑动隐藏 滑动隐藏回弹 常见功能实现
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -200,11 +202,20 @@ public class MainActivity extends AppCompatActivity {
                         isFirst = false;
                     }
                 }
+                if(isOpen) {
+                    if(startY<eventY) {
+                        startY= eventY;
+                    }
+                }else{
+                    if(startY>eventY) {
+                        startY= eventY;
+                    }
+                }
                 break;
             case MotionEvent.ACTION_UP:
                 if(isScrollY) {
                     if (isOpen) {
-                        if (startY - eventY > toolBar.getHeight() * 0.4) {
+                        if (startY - eventY > toolBar.getHeight() * 0.5) {
                             appbar.setExpanded(false);
                             isOpen = false;
                         } else {
@@ -212,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                             isOpen = true;
                         }
                     } else {
-                        if (eventY - startY > toolBar.getHeight() * 0.4) {
+                        if (eventY - startY > toolBar.getHeight() * 0.5) {
                             appbar.setExpanded(true);
                             isOpen = true;
                         } else {
