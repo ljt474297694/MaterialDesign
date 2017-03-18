@@ -181,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
     private int startX;
     private boolean isScrollY;
     private boolean isFirst;
+
     //tollBar 回弹效果
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -197,23 +198,23 @@ public class MainActivity extends AppCompatActivity {
                     if (Math.abs(eventX - startX) > Math.abs(eventY - startY) && Math.abs(eventX - startX) > UiUtils.dp2px(this, 10)) {
                         isScrollY = false;
                         isFirst = false;
-                    }else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > UiUtils.dp2px(this, 10)){
+                    } else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > UiUtils.dp2px(this, 10)) {
                         isScrollY = true;
                         isFirst = false;
                     }
                 }
-                if(isOpen) {
-                    if(startY<eventY) {
-                        startY= eventY;
+                if (isOpen) {
+                    if (startY < eventY) {
+                        startY = eventY;
                     }
-                }else{
-                    if(startY>eventY) {
-                        startY= eventY;
+                } else {
+                    if (startY > eventY) {
+                        startY = eventY;
                     }
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                if(isScrollY) {
+                if (isScrollY) {
                     if (isOpen) {
                         if (startY - eventY > toolBar.getHeight() * 0.5) {
                             appbar.setExpanded(false);
@@ -231,6 +232,8 @@ public class MainActivity extends AppCompatActivity {
                             isOpen = false;
                         }
                     }
+                } else {
+                    appbar.setExpanded(isOpen);
                 }
                 break;
         }
