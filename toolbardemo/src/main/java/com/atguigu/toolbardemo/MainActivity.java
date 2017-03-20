@@ -195,11 +195,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (isFirst) {
-                    if (Math.abs(eventX - startX) > Math.abs(eventY - startY) && Math.abs(eventX - startX) > UiUtils.dp2px(this, 15)) {
+                    if (Math.abs(eventX - startX) > Math.abs(eventY - startY) && Math.abs(eventX - startX) > toolBar.getHeight()*0.30) {
                         isScrollY = false;
                         isFirst = false;
                         appbar.setExpanded(isOpen);
-                    } else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > UiUtils.dp2px(this, 15)) {
+                    } else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > toolBar.getHeight()*0.30) {
                         isScrollY = true;
                         isFirst = false;
                     }
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 if (isScrollY) {
                     if (isOpen) {
-                        if (startY - eventY > toolBar.getHeight() * 0.5) {
+                        if (startY - eventY > toolBar.getHeight() * 0.36) {
                             appbar.setExpanded(false);
                             isOpen = false;
                         } else {
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                             isOpen = true;
                         }
                     } else {
-                        if (eventY - startY > toolBar.getHeight() * 0.5) {
+                        if (eventY - startY > toolBar.getHeight() * 0.36) {
                             appbar.setExpanded(true);
                             isOpen = true;
                         } else {
