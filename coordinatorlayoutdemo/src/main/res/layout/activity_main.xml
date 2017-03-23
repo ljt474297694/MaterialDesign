@@ -98,7 +98,6 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_gravity="center_vertical|left"
         android:layout_marginRight="15dp"
         app:layout_anchor="@+id/nestedScrollView"
         app:layout_anchorGravity="top|right" />
