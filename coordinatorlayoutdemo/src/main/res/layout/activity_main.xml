@@ -95,7 +95,6 @@
     </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton
-
         android:id="@+id/floatingActionButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
