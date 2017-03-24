@@ -104,14 +104,13 @@ public class MainActivity extends AppCompatActivity {
         toolBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                int menuItemId = item.getItemId();
-
-                if (menuItemId == R.id.action_item1) {
-                    Toast.makeText(MainActivity.this, R.string.item_01, Toast.LENGTH_SHORT).show();
-
-                } else if (menuItemId == R.id.action_item2) {
-                    Toast.makeText(MainActivity.this, R.string.item_02, Toast.LENGTH_SHORT).show();
-
+                switch (item.getItemId()) {
+                    case R.id.action_item1:
+                        Toast.makeText(MainActivity.this, R.string.item_01, Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_item2:
+                        Toast.makeText(MainActivity.this, R.string.item_02, Toast.LENGTH_SHORT).show();
+                        break;
                 }
                 return true;
             }
@@ -195,11 +194,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (isFirst) {
-                    if (Math.abs(eventX - startX) > Math.abs(eventY - startY) && Math.abs(eventX - startX) > toolBar.getHeight()*0.30) {
+                    if (Math.abs(eventX - startX) > Math.abs(eventY - startY) && Math.abs(eventX - startX) > toolBar.getHeight() * 0.30) {
                         isScrollY = false;
                         isFirst = false;
                         appbar.setExpanded(isOpen);
-                    } else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > toolBar.getHeight()*0.30) {
+                    } else if (Math.abs(eventY - startY) > Math.abs(eventX - startX) && Math.abs(eventY - startY) > toolBar.getHeight() * 0.30) {
                         isScrollY = true;
                         isFirst = false;
                     }

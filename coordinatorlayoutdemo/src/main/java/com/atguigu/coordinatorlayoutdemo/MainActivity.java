@@ -23,28 +23,11 @@ public class MainActivity extends AppCompatActivity {
     NestedScrollView nestedScrollView;
     @Bind(R.id.floatingActionButton)
     FloatingActionButton floatingActionButton;
-    boolean isOpen = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if(Math.abs(verticalOffset)>(collapsingToolbarLayout.getHeight() - toolbar.getHeight())*0.75) {
-                    if(isOpen) {
-                        floatingActionButton.hide();
-                        isOpen = false;
-                    }
-                }else{
-                    if(!isOpen) {
-                        floatingActionButton.show();
-                        isOpen = true;
-                    }
-                }
-            }
-        });
     }
 }

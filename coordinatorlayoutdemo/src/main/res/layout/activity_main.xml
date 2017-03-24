@@ -99,6 +99,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="15dp"
-        app:layout_anchor="@+id/nestedScrollView"
-        app:layout_anchorGravity="top|right" />
+        app:layout_anchor="@+id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right" />
 </android.support.design.widget.CoordinatorLayout>
