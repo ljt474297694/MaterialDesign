@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" filepath="$PROJECT_DIR$/coordinatorlayoutdemo/coordinatorlayoutdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofitdownload/retrofitdownload.iml" filepath="$PROJECT_DIR$/retrofitdownload/retrofitdownload.iml" />
       <module fileurl="file://$PROJECT_DIR$/toolbardemo/toolbardemo.iml" filepath="$PROJECT_DIR$/toolbardemo/toolbardemo.iml" />
     </modules>
   </component>
