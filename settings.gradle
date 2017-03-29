@@ -1,2 +1,2 @@
-include ':coordinatorlayoutdemo', ':retrofitdownload'
+include ':coordinatorlayoutdemo', ':retrofitdownload', ':Themes'
 include 'toolbardemo'

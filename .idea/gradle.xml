@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Themes" />
             <option value="$PROJECT_DIR$/coordinatorlayoutdemo" />
             <option value="$PROJECT_DIR$/retrofitdownload" />
             <option value="$PROJECT_DIR$/toolbardemo" />
